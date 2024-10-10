@@ -100,6 +100,16 @@ epify("Epicode");
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(num) {
+  if (num % 3 === 0 || num % 7 === 0) {
+    console.log(num, "è multiplo di 3 o 7");
+    return;
+  } else {
+    console.log(num, "non è un multiplo di 3 o 7");
+    return;
+  }
+}
+check3and7(22);
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
