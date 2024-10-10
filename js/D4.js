@@ -116,7 +116,14 @@ check3and7(22);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+function reverseString(string) {
+  let word = string;
+  word = word.split("");
+  word = word.reverse();
+  console.log(word.join(""));
+  return;
+}
+reverseString("Epicode");
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
