@@ -76,13 +76,13 @@ function boundary(n) {
   if (typeof n === "number") {
     if (n >= 20 && n <= 100) {
       console.log(n, "è incluso tra 20 e 100");
-      return;
+      return true;
     } else if (n === 400) {
       console.log(n, "è uguale a 400");
-      return;
+      return true;
     } else {
       console.log(n, "non è incluso tra 20 e 100, e non è uguale a 400");
-      return;
+      return false;
     }
   } else {
     console.log("I parametri forniti non sono di tipo numerico");
@@ -102,13 +102,13 @@ function epify(string) {
   if (typeof string === "string") {
     let word = string;
 
-    if (word.startsWith("Epicode")) {
+    if (word.toUpperCase().startsWith("EPICODE")) {
       console.log(word);
-      return;
+      return word;
     } else {
-      word = "Epicode" + " " + string;
+      word = "EPICODE" + " " + string;
       console.log(word);
-      return;
+      return word;
     }
   } else {
     console.log("Il parametro fornito non è una stringa");
@@ -147,8 +147,9 @@ function reverseString(string) {
     let word = string;
     word = word.split("");
     word = word.reverse();
-    console.log(word.join("").toUpperCase());
-    return;
+    word = word.join("").toUpperCase();
+    console.log(word);
+    return word;
   } else {
     console.log("Il parametro fornito non è una stringa");
   }
@@ -160,7 +161,20 @@ reverseString("Epicode");
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const upperFirst = function (string) {
+  const stringArray = string.split(" ");
+  const sentence = [];
+  for (let j = 0; j < stringArray.length; j++) {
+    const singleWord = stringArray[j];
+    const firstElement = singleWord.charAt(0).toUpperCase();
+    const otherLetters = singleWord.slice(1);
+    const fullWord = firstElement.concat(otherLetters);
+    sentence.push(fullWord);
+  }
+  return sentence.join(" ");
+};
+const prova = upperFirst("Mi chiamo Edoardo");
+console.log(prova);
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
