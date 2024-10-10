@@ -59,6 +59,18 @@ crazyDiff(17);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function boundary(n) {
+  if (n >= 20 && n <= 100) {
+    console.log(n, "è incluso tra 20 e 100");
+    return;
+  } else if (n === 400) {
+    console.log(n, "è uguale a 400");
+  } else {
+    console.log(n, "non è incluso tra 20 e 100, e non è uguale a 400");
+  }
+}
+boundary(35);
+
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
