@@ -65,8 +65,10 @@ function boundary(n) {
     return;
   } else if (n === 400) {
     console.log(n, "è uguale a 400");
+    return;
   } else {
     console.log(n, "non è incluso tra 20 e 100, e non è uguale a 400");
+    return;
   }
 }
 boundary(35);
@@ -78,7 +80,20 @@ boundary(35);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function epify(string) {
+  let word = string;
 
+  if (word.startsWith("Epicode")) {
+    console.log(word);
+    return;
+  } else {
+    word = "Epicode" + " " + string;
+    console.log(word);
+    return;
+  }
+}
+epify("che bello");
+epify("Epicode");
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
