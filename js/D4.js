@@ -7,6 +7,7 @@
 function area(l1, l2) {
   return l1 * l2;
 }
+console.log("L'area del rettangolo è uguale a:", area(2, 4));
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -16,12 +17,40 @@ function area(l1, l2) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function crazySum(num1, num2) {
+  if (num1 === num2) {
+    console.log(num1, "e", num2, "sono uguali, la somma è stata moltiplicata per 3");
+    return (num1 + num2) * 3;
+  } else {
+    console.log(num1, "e", num2, "non sono uguali, la loro somma ");
+    return num1 + num2;
+  }
+}
+
+console.log(crazySum(2, 2));
+console.log(crazySum(5, 2));
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(num1) {
+  let absResult = 0;
+  let absMult = 0;
+  if (num1 > 19) {
+    absResult = Math.abs(num1 - 19);
+    absMult = absResult * 3;
+    console.log("il parametro ", num1, "è superiore a 19, la differenza assoluta è", absResult, "il risultato è stato moltiplicato per 3 ed è", absMult);
+    return;
+  }
+  absResult = Math.abs(num1 - 19);
+  console.log("il parametro", num1, "è inferiore a 19,la differenza assoluta è", absResult);
+  return;
+}
+
+crazyDiff(30);
+crazyDiff(17);
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
