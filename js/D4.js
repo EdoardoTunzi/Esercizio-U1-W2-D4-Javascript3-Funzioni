@@ -160,9 +160,7 @@ reverseString("Epicode");
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function upperFirst(string) {
-  let word = string;
-}
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
@@ -175,3 +173,22 @@ function upperFirst(string) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+  if (typeof n === "number") {
+    const randomNum = function () {
+      return Math.floor(Math.random() * 10);
+    };
+    const arrayOfRandoms = [];
+
+    for (let i = 0; i < n; i++) {
+      const newNum = randomNum();
+      arrayOfRandoms.push(newNum);
+    }
+    console.log(arrayOfRandoms);
+    return arrayOfRandoms;
+  } else {
+    console.log("Il parametro fornito non è un numero");
+  }
+}
+
+giveMeRandom(5);
